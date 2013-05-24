@@ -1,7 +1,13 @@
-require 'chronography/mars'
+require 'chronography/planets/mars'
 
 module Chronography
   class Darian < Mars
+    COMPONENTS = [:year, :month, :day, :hour, :minute, :second]
+    EPOCH = {
+      0          => [ 191, 20, 26, 16, 03, 05 ],
+      1356998400 => [ 214, 17, 18, 11, 58, 43 ],
+    }
+    
     MONTHS = [
       ["Sagittarius", "Sag"],
       ["Dhanus",      "Dha"],

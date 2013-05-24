@@ -1,7 +1,13 @@
-require 'chronography/earth'
+require 'chronography/planets/earth'
 
 module Chronography
   class Gregorian < Earth
+    COMPONENTS = [:year, :month, :day, :hour, :minute, :second]
+    EPOCH = {
+      0          => [ 1970, 1, 1, 0, 0, 0 ],
+      1356998400 => [ 2013, 1, 1, 0, 0, 0 ],
+    }
+    
     MONTHS = [
       ["January",   "Jan"],
       ["February",  "Feb"],

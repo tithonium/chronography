@@ -1,4 +1,4 @@
-require 'chronography/mars/darian'
+require 'chronography/calendars/mars/darian'
 
 module Chronography
   class Aresian < Darian

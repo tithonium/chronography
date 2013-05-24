@@ -9,7 +9,9 @@ module Chronography
     extend Clock
     
     extend MethodizeConstants
-    methodize_constants :seconds_in_day
+    methodize_constants :day_seconds,
+                        :rotation_seconds,
+                        :revolution_seconds
   end
 end
 
@@ -17,11 +19,3 @@ gem_root = File.dirname(__FILE__) + '/'
 Dir["#{gem_root}chronography/**/*.rb"].each do |f|
   require f.sub(gem_root, '').sub(/\.rb$/,'')
 end
-
-
-puts Chronography::Aresian.seconds_in_day
-puts Chronography::Gregorian.long_week_day(0).inspect
-puts Chronography::Aresian.long_week_day(0).inspect
-puts Chronography::Darian.long_week_day(0).inspect
-puts Chronography::Aresian.long_month(0).inspect
-puts Chronography::Gregorian.long_month(0).inspect

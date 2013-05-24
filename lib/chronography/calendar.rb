@@ -11,7 +11,7 @@ module Chronography
     ].each do |method|
       {:long => :first, :short => :last}.each do |prefix, sel|
         eval "def #{prefix}_#{method}s ; #{method}s.map(&:#{sel}) ; end"
-        eval "def #{prefix}_#{method}(n) ; #{prefix}_#{method}s[n] ; end"
+        eval "def #{prefix}_#{method}(n) ; #{prefix}_#{method}s[(n - 1) % num_#{method}s] ; end"
       end
     end
   end

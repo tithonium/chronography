@@ -6,3 +6,7 @@ task :console do
   ARGV.clear
   IRB.start
 end
+
+task :spec do
+  system "rspec #{Dir['spec/**/*_spec.rb'].join(" ")} --format doc"
+end
