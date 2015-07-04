@@ -6,9 +6,9 @@ module Chronography
     
     module ClassMethods
       def seconds_of_day
-        (self.hours * self.class.hour_length) +
-        (self.minutes * self.class.minute_length) +
-         self.seconds
+        (self.hour * self.class.hour_length) +
+        (self.minute * self.class.minute_length) +
+         self.second
       end
     end
   end
