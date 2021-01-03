@@ -5,3 +5,5 @@ end
 def long_month_should_eq(nth, val)
   expect(described_class.long_month(nth)).to eq val
 end
+
+RSpec::Expectations.configuration.on_potential_false_positives = :nothing
