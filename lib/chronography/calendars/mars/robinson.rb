@@ -28,6 +28,6 @@ module Chronography
       ["2November",  "2Nov"],
       ["2December",  "2Dec"],
     ]
-    WEEK_DAYS = Gregorian::WEEK_DAYS
+    WEEK_DAYS = Chronography::Gregorian::WEEK_DAYS
   end
 end
