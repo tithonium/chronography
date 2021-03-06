@@ -8,7 +8,7 @@ module Chronography
     extend Timeslip
 
     DAY_SECONDS = 88775
-    ROTATION_SECONDS = 88775.244
+    ROTATION_SECONDS = 88775.244 #24h39m35.244s
     REVOLUTION_SECONDS = 686.9725 * 86400
 
     SOLAR_ROTATION_PERIOD_IN_DAYS = 1.0274912517
@@ -16,6 +16,8 @@ module Chronography
     SIDEREAL_ROTATION_PERIOD_IN_DAYS = 1.025956748
 
     CLOCK_SEQ = [86400, :timeslip]
+
+    EPOCH = Chronography::Epoch::KNOWN_MIDNIGHT_UE + 22
 
     DEFAULT_FORMAT = '%YYY-%MM-%DD %hh:%mm:%ss'
 

@@ -119,11 +119,13 @@ module Chronography
       {
         # 'Telescopic Epoch--' => -11385895164 - 88775,
         # 'Telescopic Epoch'   => -11385895164,
-        # 'Known Midnight'     => Chronography::Epoch::KNOWN_MIDNIGHT_UE,
+        # 'Known Midnight (Earth)'     => Chronography::Epoch::KNOWN_MIDNIGHT_UE,
+        'Known Midnight (Mars)'     => Chronography::Mars::EPOCH,
+        'Known Midnight (Mars) + 1 Myear'     => Chronography::Mars::EPOCH + Chronography::Mars::COMMON_YEAR_LENGTH * Chronography::Mars::DAY_SECONDS,
         # 'Spirit Landing'     => 1073137591,
         # 'Unix Epoch'         => Chronography::Epoch::UNIX_UE,
-        'Marty'              => 225948360,
-        'Now'                => Time.now
+  #      'Marty'              => 225948360,
+  #      'Now'                => Time.now
       }.each do |name, tt|
         puts
         puts name
